@@ -18,4 +18,8 @@ public interface IUserAccountService extends IService<UserAccount> {
      */
     Integer addUserAccount(UserAccount userAccount);
 
+    /**
+     * 账号密码校验
+     */
+    Long login(String userName, String password);
 }

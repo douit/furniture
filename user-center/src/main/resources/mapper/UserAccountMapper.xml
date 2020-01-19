@@ -4,7 +4,7 @@
 
     <!-- 添加用户 -->
     <insert id="addUserAccount" parameterType="com.qf.furniture.entity.UserAccount">
-        insert into furniture(uid, user_name, password, mobile, mobile_bind_time, email, email_bind_time, access_token)
+        insert into user_account(uid, user_name, password, mobile, mobile_bind_time, email, email_bind_time, access_token)
         values(#{uid}, #{userName}, #{password}, #{mobile}, #{mobileBindTime}, #{email}, #{emailBindTime}, #{accessToken})
     </insert>
 
@@ -13,4 +13,12 @@
         select uid from user_account where user_name = #{userName} where is_delete = 1;
     </select>
 
+    <!-- 检查用户是否匹配 -->
+    <select id="login" resultType="com.qf.furniture.entity.UserAccount">
+        select uid, user_name, password, mobile, mobile_bind_time, email, email_bind_time, access_token from user_account
+        where user_name = #{userName}
+        or mobile = #{userName}
+        or email = #{userName}
+        and is_delete = 1;
+    </select>
 </mapper>

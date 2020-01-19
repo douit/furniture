@@ -29,11 +29,22 @@ public class UserAccountController {
      * @return  结果集
      */
     @PostMapping(value = "/register")
-    private ResponseResult<Integer> register(@RequestBody UserAccount userAccount){
+    private ResponseResult register(@RequestBody UserAccount userAccount){
         Integer result = userAccountService.addUserAccount(userAccount);
         if (result == null){
             throw new GlobalExceptions(CodeStatus.FAIL);
         }
         return new ResponseResult<>(CodeStatus.SUCCESS, result);
+    }
+
+    /**
+     * 登录
+     * @param userName  用户名(账号, 手机, 邮箱)
+     * @param password  密码
+     * @return  结果集
+     */
+    @PostMapping(value = "/login")
+    private ResponseResult login(@RequestParam String userName, @RequestParam String password){
+        return new ResponseResult<>(CodeStatus.SUCCESS, userAccountService.login(userName, password));
     }
 }

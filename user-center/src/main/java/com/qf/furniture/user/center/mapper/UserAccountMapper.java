@@ -22,4 +22,9 @@ public interface UserAccountMapper extends BaseMapper<UserAccount> {
      * 检查账号是否存在
      */
     Long checkUserAccount(String userName);
+
+    /**
+     * 账号密码校验
+     */
+    UserAccount login(String userName);
 }
