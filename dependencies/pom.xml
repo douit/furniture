@@ -34,6 +34,14 @@
             </dependency>
             <!-- SpringCloud End-->
 
+            <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth.boot/spring-security-oauth2-autoconfigure -->
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>2.2.3.RELEASE</version>
+            </dependency>
+
+
             <!-- FastJson Begin -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -41,19 +49,6 @@
                 <version>1.2.62</version>
             </dependency>
             <!-- FastJson End -->
-
-            <!--mybatis plus generator start-->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-generator</artifactId>
-                <version>RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.freemarker</groupId>
-                <artifactId>freemarker</artifactId>
-                <version>RELEASE</version>
-            </dependency>
-            <!--mybatis plus generator end-->
 
             <!-- MyBatis -->
             <dependency>
