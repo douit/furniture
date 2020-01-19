@@ -1,6 +1,6 @@
 package com.qf.furniture.user.center.mapper;
 
-import com.cs.furniture.user.center.user.entity.UserGrade;
+import com.qf.furniture.entity.UserGrade;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

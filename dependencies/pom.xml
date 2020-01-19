@@ -16,6 +16,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.qf.furniture</groupId>
+                <artifactId>commons</artifactId>
+                <version>1.0.0</version>
+            </dependency>
             <!-- SpringCloud Begin-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

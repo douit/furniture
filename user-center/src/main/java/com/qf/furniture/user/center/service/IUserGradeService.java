@@ -1,6 +1,6 @@
 package com.qf.furniture.user.center.service;
 
-import com.cs.furniture.user.center.user.entity.UserGrade;
+import com.qf.furniture.entity.UserGrade;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

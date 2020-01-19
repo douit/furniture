@@ -1,7 +1,5 @@
 package com.qf.furniture.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -17,41 +15,48 @@ public class UserAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    /**
+     * 用户id
+     */
+    private Long uid;
 
-    private Integer uid;
-
+    /**
+     * 账号
+     */
     private String userName;
 
+    /**
+     * 密码
+     */
     private String password;
 
+    /**
+     * 手机号码
+     */
     private String mobile;
 
+    /**
+     * 手机绑定日期
+     */
     private LocalDateTime mobileBindTime;
 
+    /**
+     * 邮箱
+     */
     private String email;
 
+    /**
+     * 邮箱绑定日期
+     */
     private LocalDateTime emailBindTime;
-
-    private LocalDateTime createTime;
 
     private String accessToken;
 
-    private Integer isDelete;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
     public String getUserName() {
@@ -96,13 +101,7 @@ public class UserAccount implements Serializable {
     public void setEmailBindTime(LocalDateTime emailBindTime) {
         this.emailBindTime = emailBindTime;
     }
-    public LocalDateTime getCreateTime() {
-        return createTime;
-    }
 
-    public void setCreateTime(LocalDateTime createTime) {
-        this.createTime = createTime;
-    }
     public String getAccessToken() {
         return accessToken;
     }
@@ -110,18 +109,11 @@ public class UserAccount implements Serializable {
     public void setAccessToken(String accessToken) {
         this.accessToken = accessToken;
     }
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
 
     @Override
     public String toString() {
         return "UserAccount{" +
-            "id=" + id +
+            "id=" +
             ", uid=" + uid +
             ", userName=" + userName +
             ", password=" + password +
@@ -129,9 +121,9 @@ public class UserAccount implements Serializable {
             ", mobileBindTime=" + mobileBindTime +
             ", email=" + email +
             ", emailBindTime=" + emailBindTime +
-            ", createTime=" + createTime +
+            ", createTime=" +
             ", accessToken=" + accessToken +
-            ", isDelete=" + isDelete +
+            ", isDelete=" +
         "}";
     }
 }

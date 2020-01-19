@@ -1,6 +1,6 @@
 package com.qf.furniture.user.center.service;
 
-import com.cs.furniture.user.center.user.entity.UserAccount;
+import com.qf.furniture.entity.UserAccount;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -12,5 +12,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-01-19
  */
 public interface IUserAccountService extends IService<UserAccount> {
+
+    /**
+     * 添加用户
+     */
+    Integer addUserAccount(UserAccount userAccount);
 
 }

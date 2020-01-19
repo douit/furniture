@@ -1,6 +1,6 @@
 package com.qf.furniture.user.center.mapper;
 
-import com.cs.furniture.user.center.user.entity.UserAccount;
+import com.qf.furniture.entity.UserAccount;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -13,4 +13,13 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface UserAccountMapper extends BaseMapper<UserAccount> {
 
+    /**
+     * 添加用户
+     */
+    Integer addUserAccount(UserAccount userAccount);
+
+    /**
+     * 检查账号是否存在
+     */
+    Long checkUserAccount(String userName);
 }

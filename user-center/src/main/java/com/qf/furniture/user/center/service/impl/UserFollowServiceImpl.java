@@ -1,8 +1,8 @@
 package com.qf.furniture.user.center.service.impl;
 
-import com.cs.furniture.user.center.user.entity.UserFollow;
-import com.cs.furniture.user.center.user.mapper.UserFollowMapper;
-import com.cs.furniture.user.center.user.service.IUserFollowService;
+import com.qf.furniture.entity.UserFollow;
+import com.qf.furniture.user.center.mapper.UserFollowMapper;
+import com.qf.furniture.user.center.service.IUserFollowService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

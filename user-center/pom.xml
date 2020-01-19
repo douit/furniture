@@ -11,6 +11,13 @@
     <artifactId>user-center</artifactId>
 
     <dependencies>
+        <!-- commons begin -->
+        <dependency>
+            <groupId>com.qf.furniture</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+        <!-- commons end -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

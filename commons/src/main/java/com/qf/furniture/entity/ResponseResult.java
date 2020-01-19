@@ -1,5 +1,8 @@
 package com.qf.furniture.entity;
 
+import com.qf.furniture.exception.CodeStatus;
+import org.aspectj.apache.bcel.classfile.Code;
+
 /**
  * @author CHAN
  * @date 2020/01/18
@@ -18,6 +21,12 @@ public class ResponseResult<T> {
     public ResponseResult(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
+        this.data = data;
+    }
+
+    public ResponseResult(CodeStatus status, T data) {
+        this.code = status.getCode();
+        this.msg = status.getMsg();
         this.data = data;
     }
 

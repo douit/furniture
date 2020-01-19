@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cs.furniture.user.center.user.mapper.UserAccountMapper">
+<mapper namespace="com.qf.furniture.user.center.mapper.UserAccountMapper">
+
+    <!-- 添加用户 -->
+    <insert id="addUserAccount" parameterType="com.qf.furniture.entity.UserAccount">
+        insert into furniture(uid, user_name, password, mobile, mobile_bind_time, email, email_bind_time, access_token)
+        values(#{uid}, #{userName}, #{password}, #{mobile}, #{mobileBindTime}, #{email}, #{emailBindTime}, #{accessToken})
+    </insert>
+
+    <!-- 检查用户名是否存在 -->
+    <select id="checkUserAccount" resultType="Long">
+        select uid from user_account where user_name = #{userName} where is_delete = 1;
+    </select>
 
 </mapper>
